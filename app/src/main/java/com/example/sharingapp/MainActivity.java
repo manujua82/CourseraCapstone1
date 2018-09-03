@@ -52,13 +52,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.contacts:
-                Intent intent = new Intent(this, AddItemActivity.class );
+                Intent intent = new Intent(this, ContactsActivity.class );
                 startActivity(intent);
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
-
         }
 
     }

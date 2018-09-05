@@ -20,7 +20,7 @@ public class ContactList {
     private String FILENAME = "contacts.sav";
 
     public ContactList() {  contacts = new ArrayList<Contact>(); }
-    
+
     public void setContacts(ArrayList<Contact> contact_list) { contacts = contact_list; }
 
     public ArrayList<Contact> getContacts() { return contacts; }
@@ -57,7 +57,7 @@ public class ContactList {
         return null;
     }
 
-    public void loadContact(Context context){
+    public void loadContacts(Context context){
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
             InputStreamReader isr = new InputStreamReader(fis);

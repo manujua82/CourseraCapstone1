@@ -7,6 +7,18 @@ public class Contact {
     private String email;
     private String id;
 
+    public Contact(String username, String email, String id){
+        this.username = username;
+        this.email = email;
+
+        if (id == null){
+            setId();
+        } else {
+            updateId(id);
+        }
+
+    }
+
     public void setId() {
         this.id = UUID.randomUUID().toString();
     }

@@ -29,7 +29,7 @@ public class Item {
         this.description = description;
         this.dimensions = dimensions;
         this.status = "Available";
-        this.borrower = new Contact();
+        this.borrower = null;
         addImage(image);
 
         if (id == null){

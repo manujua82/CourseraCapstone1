@@ -102,7 +102,7 @@ public class ItemList {
         return selected_items;
     }
 
-    public ArrayList<Contact> getActiveBorrower(){
+    public ArrayList<Contact> getActiveBorrowers(){
         ArrayList<Contact> active_borrowers = new ArrayList<Contact>();
         for (Item i : items) {
             Contact borrower = i.getBorrower();

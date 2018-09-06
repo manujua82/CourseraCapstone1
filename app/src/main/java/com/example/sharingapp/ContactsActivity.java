@@ -41,7 +41,7 @@ public class ContactsActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-               /* Contact contact = adapter.getItem(i);
+                Contact contact = adapter.getItem(i);
 
                 ArrayList<Contact> active_borrowers = item_list.getActiveBorrowers();
                 active_borrowers_list.setContacts(active_borrowers);
@@ -61,7 +61,7 @@ public class ContactsActivity extends AppCompatActivity {
                 Intent intent = new Intent(context, EditContactActivity.class);
                 intent.putExtra("position", meta_pos);
                 startActivity(intent);
-*/
+
                 return true;
 
             }
@@ -83,8 +83,8 @@ public class ContactsActivity extends AppCompatActivity {
     }
 
     public void addContactActivity(View view){
-        //Intent intent = new Intent(this, AddContactActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, AddContactActivity.class);
+        startActivity(intent);
     }
 
 

@@ -41,7 +41,17 @@ public class ContactList {
 
     public int getSize() { return contacts.size(); }
 
-    public int getIndex(Contact contact) { return  contacts.indexOf(contact); }
+    public int getIndex(Contact contact) {
+        //return  contacts.indexOf(contact);
+        int pos = 0;
+        for (Contact i : contacts) {
+            if (contact.getId().equals(i.getId())) {
+                return pos;
+            }
+            pos = pos+1;
+        }
+        return -1;
+    }
 
     public boolean hasContact(Contact contact){
         if(contacts.indexOf(contact) >= 0 )
@@ -72,7 +82,7 @@ public class ContactList {
         }
     }
 
-    public void saveItems(Context context) {
+    public void saveContacts(Context context) {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, 0);
             OutputStreamWriter osw = new OutputStreamWriter(fos);
@@ -89,8 +99,8 @@ public class ContactList {
 
     public boolean isUsernameAvailable(String username){
         if(getContactByUsername(username) != null)
-            return true;
-        return false;
+            return false;
+        return true;
     }
 
 }
